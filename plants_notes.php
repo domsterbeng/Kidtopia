@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="css/plants1.css">
 
 </head>
-
+ 
 <body>
   <div id="app">
     <v-app class="blue lighten-4">
