@@ -20,7 +20,7 @@
 
   //   if ($correct_answer == $answer1 || $correct_answer == $answer2 || $correct_answer == $answer3 || $correct_answer == $answer4) {
   //     mysqli_query($conn, $sql);
-  //   } else {
+  //   } else {s
   //     echo "<script>alert('The correct answer should be one of the four answers!');</script>";
   //   }
 
