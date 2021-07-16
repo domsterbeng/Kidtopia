@@ -1,0 +1,211 @@
+
+
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+
+.mouse_scroll {
+	display: block;
+	margin: 0 auto;
+	width: 24px;
+	height: 100px;
+	//background: blue;
+  transform :rotate(-65deg);
+  float: left;
+  position: relative;
+  left : 280px;
+  bottom: 40px;
+}
+
+
+.m_scroll_arrows
+{
+  display: block;
+  width: 5px;
+  height: 5px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+
+  border-right: 2px solid orange;
+  border-bottom: 2px solid orange;
+  margin: 0 0 3px 4px;
+
+  width: 16px;
+  height: 16px;
+}
+
+
+.ar1
+{
+  margin-top: 1px;
+}
+
+.ar1, .ar2, .ar3,.ar4, .ar5, .ar6, .ar7, .ar8
+{
+    -webkit-animation: mouse-scroll 2s infinite;
+    -moz-animation: mouse-scroll 2s infinite;
+}
+
+.ar1
+{
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  -webkit-animation-direction: alternate;
+}
+
+.ar2
+{
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+  margin-top: -6px;
+}
+
+.ar3
+{
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -webkit-animation-direction: alternate;
+  margin-top: -6px;
+}
+
+.ar4
+{
+  -webkit-animation-delay: .4s;
+  -moz-animation-delay: .4s;
+  -webkit-animation-direction: alternate;
+  margin-top: -6px;
+}
+
+.ar5
+{
+  -webkit-animation-delay: .5s;
+  -moz-animation-delay: .5s;
+  -webkit-animation-direction: alternate;
+  margin-top: -6px;
+}
+
+.ar6
+{
+  -webkit-animation-delay: .6s;
+  -moz-animation-delay: .6s;
+  -webkit-animation-direction: alternate;
+  margin-top: -6px;
+}
+
+.ar7
+{
+  -webkit-animation-delay: .7s;
+  -moz-animation-delay: .7s;
+  -webkit-animation-direction: alternate;
+  margin-top: -6px;
+}
+
+.ar8
+{
+  -webkit-animation-delay: .8s;
+  -moz-animation-delay: .8s;
+  -webkit-animation-direction: alternate;
+  margin-top: -6px;
+}
+
+
+
+
+
+@-webkit-keyframes mouse-scroll {
+
+  0%   { opacity: 0;}
+  50%  { opacity: .5;}
+  100% { opacity: 1;}
+}
+@-moz-keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+@-o-keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+@keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+/*water cycle*/
+/*bubble*/
+
+
+
+.watercyclefact{
+  position: relative;
+  left: 25px;
+  bottom : 20px;
+  width: 320px;
+  height: 100px;
+
+}
+
+
+.fact{
+  background-color: lightblue;
+  position: relative;
+ bottom: 220px;
+
+  left: 290px;
+  width: 180px;
+  height: 135px;
+
+  border-radius: 10px;
+}
+
+.fact:before{
+  content:"";
+  position: relative;
+ left: 20px;
+  top: 151px;
+  width: 0px;
+  height: 0px;
+  transform: rotate3d(45deg);
+  border-top: 25px solid lightblue;
+  border-right: 25px solid transparent;
+}
+
+
+/* Flipping Cards */
+.card-content{
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.back{
+  position: absolute;
+  top: 0;
+}
+
+.card-flip:hover .card-content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front,
+.back{
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.back {
+  transform: rotateY( 180deg );
+}
+
+/**/

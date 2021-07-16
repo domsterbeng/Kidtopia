@@ -1,0 +1,265 @@
+.spaceman {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: 8px;
+  margin-left:175px;
+  width: 300px;
+
+  transform-origin: 50% 50%;
+  animation: spaceFloat 15s linear infinite;
+}
+.spaceman .head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 120px;
+  height: 100px;
+  background: white;
+  border-radius: 40px 40px 35px 35px;
+}
+.spaceman .head::before, .spaceman .head::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 50px;
+  background: #9a9a9a;
+}
+.spaceman .head::before {
+  top: 26px;
+  left: -10px;
+  border-radius: 15px 0 0 15px;
+}
+.spaceman .head::after {
+  top: 26px;
+  right: -10px;
+  border-radius: 0 15px 15px 0;
+}
+.spaceman .head .face {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff8400;
+  width: 100px;
+  height: 70px;
+  border-radius: 40px 40px 25px 25px;
+}
+.spaceman .head .face::before, .spaceman .head .face::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border-radius: 15px;
+  animation: blink 4s linear infinite;
+}
+.spaceman .head .face::before {
+  left: 20px;
+  top: 33px;
+}
+.spaceman .head .face::after {
+  right: 20px;
+  top: 30px;
+}
+.spaceman .arm {
+  position: absolute;
+  display: block;
+  width: 85px;
+  height: 40px;
+  background: white;
+}
+.spaceman .arm::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #cdcdcd;
+}
+.spaceman .arm.left, .spaceman .arm.right {
+  top: 100px;
+}
+.spaceman .arm.left {
+  left: 35px;
+  border-radius: 20px 0 0 20px;
+  transform-origin: 100% 0%;
+  animation: armWiggle 4s linear infinite alternate;
+}
+.spaceman .arm.left::after {
+  left: 0;
+  border-radius: 20px 0 0 20px;
+}
+.spaceman .arm.right {
+  right: 35px;
+  border-radius: 0 20px 20px 0;
+  transform-origin: 0% 0%;
+  animation: armWiggle 3.5s linear infinite alternate;
+}
+.spaceman .arm.right::after {
+  right: 0;
+  border-radius: 0 20px 20px 0;
+}
+.spaceman .leg {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 45px;
+  background: white;
+  border-bottom: 50px solid white;
+}
+.spaceman .leg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 35px;
+  background: white;
+}
+.spaceman .leg.left, .spaceman .leg.right {
+  top: 173px;
+}
+.spaceman .leg.left {
+  left: 110px;
+  border-radius: 0 0 10px 0;
+  transform-origin: 0% 0%;
+  animation: legWiggle 3s linear infinite alternate;
+}
+.spaceman .leg.left::after {
+  bottom: -50px;
+  left: -30px;
+  border-radius: 20px 0 0 10px;
+}
+.spaceman .leg.right {
+  right: 110px;
+  border-radius: 0 0 0 10px;
+  transform-origin: 100% 0%;
+  animation: legWiggle 3.5s linear infinite alternate;
+}
+.spaceman .leg.right::after {
+  bottom: -50px;
+  right: -30px;
+  border-radius: 0 20px 10px 0;
+}
+.spaceman .torso {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 100px;
+  height: 90px;
+  background: #cdcdcd;
+  border-radius: 15px 15px 20px 20px;
+}
+.spaceman .torso::before, .spaceman .torso::after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+.spaceman .torso::before {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 75px;
+  background: #9a9a9a;
+  border-radius: 5px;
+}
+.spaceman .torso::after {
+  top: 18px;
+  left: 30%;
+  transform: translateX(-30%);
+  width: 20px;
+  height: 60px;
+  background: white;
+  border-radius: 5px;
+}
+@keyframes spaceFloat {
+  25% {
+    transform: translate(0px, -5px);
+  }
+  50% {
+    transform: translate(0px, 5px);
+  }
+}
+@keyframes blink {
+  0% {
+    top: 30px;
+    height: 30px;
+  }
+  49% {
+    top: 30px;
+    height: 30px;
+  }
+  50% {
+    top: 44px;
+    height: 2px;
+  }
+  51% {
+    top: 30px;
+    height: 30px;
+  }
+  100% {
+    top: 30px;
+    height: 30px;
+  }
+}
+@keyframes armWiggle {
+  0% {
+    transform: rotate(18deg);
+  }
+  100% {
+    transform: rotate(-18deg);
+  }
+}
+@keyframes legWiggle {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+html, body {
+  background: #222;
+}
+
+/*bubble*/
+.slideContainer{
+  position: relative;
+  left: 25px;
+  bottom : 20px;
+  width: 320px;
+  height: 100px;
+
+}
+
+
+.bubble{
+
+  position: relative;
+  top: 15px;
+  left: 20px;
+  width: 420px;
+  height: 200px;
+  background: white;
+  border-radius: 10px;
+}
+
+.bubble:before{
+  content:"";
+  position: relative;
+  top: 214px;
+  left: 245px;
+  width: 0px;
+  height: 0px;
+  transform: rotate3d(45deg);
+  border-top: 25px solid white;
+  border-left: 25px solid transparent;
+}
